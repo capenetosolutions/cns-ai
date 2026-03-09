@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CNS AI Dashboard</title>
+    <title>CNS AI Command Center | Dashboard v1</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
@@ -11,16 +11,52 @@
             background: #0d1117;
             color: #c9d1d9;
             padding: 20px;
+            min-height: 100vh;
+        }
+        .alert-banner {
+            background: linear-gradient(90deg, #238636, #2ea043);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
         }
         h1 {
             color: #58a6ff;
             margin-bottom: 10px;
-            font-size: 24px;
+            font-size: 28px;
         }
         .subtitle {
             color: #8b949e;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             font-size: 14px;
+        }
+        .version {
+            color: #7ee787;
+            font-size: 12px;
+            margin-bottom: 20px;
+        }
+        .v2-notice {
+            background: #21262d;
+            border: 1px solid #d29922;
+            color: #d29922;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .v2-notice a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
+        .v2-notice a:hover {
+            text-decoration: underline;
         }
         .board {
             display: grid;
@@ -53,7 +89,7 @@
             padding: 10px;
             margin-bottom: 10px;
             cursor: pointer;
-            transition: border-color 0.2s;
+            transition: all 0.2s;
         }
         .card:hover { border-color: #58a6ff; }
         .card-title {
@@ -89,6 +125,7 @@
             background: #161b22;
             border-radius: 8px;
             margin-bottom: 20px;
+            flex-wrap: wrap;
         }
         .status-item {
             display: flex;
@@ -102,11 +139,11 @@
         }
         .status-green { background: #2ea043; }
         .status-yellow { background: #d29922; }
-        .status-red { background: #da3633; }
         .agents-row {
             display: flex;
             gap: 15px;
             margin-bottom: 20px;
+            flex-wrap: wrap;
         }
         .agent-card {
             background: #161b22;
@@ -124,11 +161,30 @@
             border-radius: 12px;
             background: #2ea043;
         }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #30363d;
+            color: #8b949e;
+            font-size: 12px;
+        }
     </style>
 </head>
 <body>
-    <h1>🧠 CNS AI Dashboard</h1>
-    <div class="subtitle">Central Nervous System Agent Fleet</div>
+    <div class="alert-banner">
+        <span>🚀</span>
+        <span>FLEET FULLY ACTIVATED: 6/6 Agents Live | TASK-008: Dashboard v2 Build in Progress</span>
+    </div>
+
+    <h1>🧠 CNS AI Command Center</h1>
+    <div class="subtitle">Cape Neto Solutions - Autonomous AI Company</div>
+    <div class="version">Dashboard v1.0 | Last Updated: 2026-03-09 20:52 GMT</div>
+
+    <div class="v2-notice">
+        <strong>🏗️ Dashboard v2 Under Development</strong><br>
+        New features: Sidebars, Activity Feed, Agent Chat, Real-time Updates<br>
+        <a href="./v2/">Check v2 Progress →</a> | Project: CNS AI Command Center
+    </div>
 
     <div class="agents-row">
         <div class="agent-card">
@@ -139,103 +195,58 @@
         <div class="agent-card">
             <span>📋</span>
             <span class="agent-name">PM Agent</span>
-            <span class="agent-status">Active</span>
+            <span class="agent-status">08:00 Daily</span>
         </div>
         <div class="agent-card">
             <span>💻</span>
             <span class="agent-name">Tech Agent</span>
-            <span class="agent-status" style="background:#d29922;">Building</span>
+            <span class="agent-status" style="background:#da3633;">BUILDING</span>
         </div>
         <div class="agent-card">
-            <span style="opacity:0.5;">🔧</span>
-            <span class="agent-name" style="opacity:0.5;">Ops Agent</span>
-            <span class="agent-status" style="background:#30363d;">Pending</span>
+            <span>🎬</span>
+            <span class="agent-name">Content Agent</span>
+            <span class="agent-status">Active</span>
+        </div>
+        <div class="agent-card">
+            <span>🚀</span>
+            <span class="agent-name">Funnel Agent</span>
+            <span class="agent-status">Active</span>
+        </div>
+        <div class="agent-card">
+            <span>🔧</span>
+            <span class="agent-name">Ops Agent</span>
+            <span class="agent-status">Monitoring</span>
         </div>
     </div>
 
     <div class="status-bar">
         <div class="status-item">
             <div class="status-dot status-green"></div>
-            <span>3 Active Agents</span>
-        </div>
-        <div class="status-item">
-            <div class="status-dot status-yellow"></div>
-            <span>1 Task In Progress</span>
+            <span>6 Active Agents</span>
         </div>
         <div class="status-item">
             <div class="status-dot status-green"></div>
-            <span>Daily Standup: 08:00 GMT</span>
+            <span>8 Tasks Complete</span>
         </div>
         <div class="status-item">
-            <span>📅 2026-03-09</span>
+            <div class="status-dot status-yellow"></div>
+            <span>3 Tasks In Progress</span>
+        </div>
+        <div class="status-item">
+            <div class="status-dot status-green"></div>
+            <span>Standup: 08:00 GMT</span>
+        </div>
+        <div class="status-item">
+            <span>🟢 System Operational</span>
         </div>
     </div>
 
     <div class="board">
         <div class="column">
             <h3>📥 Backlog <span>(0)</span></h3>
-            <div class="card">
-                <div class="card-title">Define Ops Agent scope</div>
-                <div class="card-meta">
-                    <span class="assignee">pm-agent</span>
-                    <span class="priority priority-medium">MED</span>
-                </div>
-            </div>
         </div>
 
         <div class="column">
-            <h3>📝 Todo <span>(0)</span></h3>
-        </div>
-
-        <div class="column">
-            <h3>🔄 In Progress <span>(1)</span></h3>
+            <h3>📝 Todo <span>(1)</span></h3>
             <div class="card">
-                <div class="card-title">Build CNS AI Dashboard</div>
-                <div class="card-meta">
-                    <span class="assignee">tech-agent</span>
-                    <span class="priority priority-high">HIGH</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="column">
-            <h3>👀 Review <span>(0)</span></h3>
-        </div>
-
-        <div class="column">
-            <h3>✅ Done <span>(3)</span></h3>
-            <div class="card">
-                <div class="card-title">Install CNS skills</div>
-                <div class="card-meta">
-                    <span class="assignee">router</span>
-                    <span class="priority priority-high">HIGH</span>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-title">Set up PM Agent standup</div>
-                <div class="card-meta">
-                    <span class="assignee">pm-agent</span>
-                    <span class="priority priority-high">HIGH</span>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-title">Build Phase 1 Kanban</div>
-                <div class="card-meta">
-                    <span class="assignee">router</span>
-                    <span class="priority priority-medium">MED</span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        // Auto-refresh every 30 seconds
-        setInterval(() => {
-            location.reload();
-        }, 30000);
-        
-        // Card click handler
-        document.querySelectorAll('.card').forEach(card => {
-            card.addEventListener('click', () => {
-                const title = card.querySelector('.card-title').textContent;
-                console.log('Clicked:', title);
+                <div class="card-title">PROJECT
