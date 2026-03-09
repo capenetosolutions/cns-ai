@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CNS AI Dashboard</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0d1117;
+            color: #c9d1d9;
+            padding: 20px;
+        }
+        h1 {
+            color: #58a6ff;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+        .subtitle {
+            color: #8b949e;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+        .board {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .column {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 12px;
+            min-height: 400px;
+        }
+        .column h3 {
+            color: #58a6ff;
+            font-size: 14px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #30363d;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .column h3 span { font-size: 12px; color: #8b949e; }
+        .card {
+            background: #21262d;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            padding: 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: border-color 0.2s;
+        }
+        .card:hover { border-color: #58a6ff; }
+        .card-title {
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+        .card-meta {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            font-size: 11px;
+        }
+        .assignee {
+            background: #30363d;
+            padding: 2px 8px;
+            border-radius: 12px;
+            color: #7ee787;
+        }
+        .priority {
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+        .priority-high { background: #da3633; color: #fff; }
+        .priority-medium { background: #d29922; color: #000; }
+        .priority-low { background: #2ea043; color: #fff; }
+        .status-bar {
+            display: flex;
+            gap: 20px;
+            padding: 15px;
+            background: #161b22;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .status-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .status-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+        .status-green { background: #2ea043; }
+        .status-yellow { background: #d29922; }
+        .status-red { background: #da3633; }
+        .agents-row {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .agent-card {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .agent-name { font-weight: 500; }
+        .agent-status {
+            font-size: 11px;
+            padding: 2px 8px;
+            border-radius: 12px;
+            background: #2ea043;
+        }
+    </style>
+</head>
+<body>
+    <h1>🧠 CNS AI Dashboard</h1>
+    <div class="subtitle">Central Nervous System Agent Fleet</div>
+
+    <div class="agents-row">
+        <div class="agent-card">
+            <span>🎯</span>
+            <span class="agent-name">Router</span>
+            <span class="agent-status">Active</span>
+        </div>
+        <div class="agent-card">
+            <span>📋</span>
+            <span class="agent-name">PM Agent</span>
+            <span class="agent-status">Active</span>
+        </div>
+        <div class="agent-card">
+            <span>💻</span>
+            <span class="agent-name">Tech Agent</span>
+            <span class="agent-status" style="background:#d29922;">Building</span>
+        </div>
+        <div class="agent-card">
+            <span style="opacity:0.5;">🔧</span>
+            <span class="agent-name" style="opacity:0.5;">Ops Agent</span>
+            <span class="agent-status" style="background:#30363d;">Pending</span>
+        </div>
+    </div>
+
+    <div class="status-bar">
+        <div class="status-item">
+            <div class="status-dot status-green"></div>
+            <span>3 Active Agents</span>
+        </div>
+        <div class="status-item">
+            <div class="status-dot status-yellow"></div>
+            <span>1 Task In Progress</span>
+        </div>
+        <div class="status-item">
+            <div class="status-dot status-green"></div>
+            <span>Daily Standup: 08:00 GMT</span>
+        </div>
+        <div class="status-item">
+            <span>📅 2026-03-09</span>
+        </div>
+    </div>
+
+    <div class="board">
+        <div class="column">
+            <h3>📥 Backlog <span>(0)</span></h3>
+            <div class="card">
+                <div class="card-title">Define Ops Agent scope</div>
+                <div class="card-meta">
+                    <span class="assignee">pm-agent</span>
+                    <span class="priority priority-medium">MED</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <h3>📝 Todo <span>(0)</span></h3>
+        </div>
+
+        <div class="column">
+            <h3>🔄 In Progress <span>(1)</span></h3>
+            <div class="card">
+                <div class="card-title">Build CNS AI Dashboard</div>
+                <div class="card-meta">
+                    <span class="assignee">tech-agent</span>
+                    <span class="priority priority-high">HIGH</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <h3>👀 Review <span>(0)</span></h3>
+        </div>
+
+        <div class="column">
+            <h3>✅ Done <span>(3)</span></h3>
+            <div class="card">
+                <div class="card-title">Install CNS skills</div>
+                <div class="card-meta">
+                    <span class="assignee">router</span>
+                    <span class="priority priority-high">HIGH</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-title">Set up PM Agent standup</div>
+                <div class="card-meta">
+                    <span class="assignee">pm-agent</span>
+                    <span class="priority priority-high">HIGH</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-title">Build Phase 1 Kanban</div>
+                <div class="card-meta">
+                    <span class="assignee">router</span>
+                    <span class="priority priority-medium">MED</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Auto-refresh every 30 seconds
+        setInterval(() => {
+            location.reload();
+        }, 30000);
+        
+        // Card click handler
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('click', () => {
+                const title = card.querySelector('.card-title').textContent;
+                console.log('Clicked:', title);
