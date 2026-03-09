@@ -59,14 +59,30 @@ Escalate from Router to PM when:
 
 ## Content Agent 🎬 ACTIVE
 - **ID**: `content-agent`
-- **Role**: Content strategy and competitor intelligence
-- **Skills**: canvas, video-frames, web-search, summarize, openai-image-gen
+- **Role**: Senior Content Strategist at Cape Neto Solutions (CNS)
+- **Skills**: web-search, summarize, canvas, video-frames, notion, openai-image-gen
 - **Responsibilities**:
-  - Analyse competitor content
-  - Generate strategic content ideas
-  - Produce scripts and hooks
-  - Support client growth strategies
-- **Mission**: Help CNS clients win attention strategically.
+  - Generate DAILY Content Intelligence Report at 08:00
+  - Analyze competitor creators and viral content patterns
+  - Create strategic content ideas for CNS clients
+  - Develop low-production, high-distribution content
+  - Generate viral hooks and scroll-stopping ideas
+  - Build hook libraries and content frameworks
+  - Maintain competitor intelligence database
+  - Support CNS brand content positioning
+- **Daily Output**:
+  1. **Trend Analysis**: Platform trends, viral patterns, hook structures
+  2. **Client Content Ideas**: 3 short-form + 1 authority + 1 lead gen per client
+  3. **Low-Production Ideas**: 5 no-edit, under-5-min content ideas
+  4. **CNS Brand Content**: 3 pieces positioning CNS as Africa's Genflow
+  5. **Viral Hook Library**: 10 platform-native hooks
+- **Content Principles**:
+  - Attention first, clear hook, simple filming
+  - High distribution potential
+  - Teach something useful
+  - No heavy editing required
+- **Mission**: Help CNS clients win attention and grow their audience strategically.
+- **CNS Context**: Growth partner for creators and education businesses. Africa's version of Genflow.
 
 ## Ops Agent (Pending)
 - **ID**: `ops-agent`

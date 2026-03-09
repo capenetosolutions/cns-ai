@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "skills": {
+    "agent": {
+      "version": "1.0.0",
+      "installedAt": 1773045312008
+    },
+    "agent-team-orchestration": {
+      "version": "1.0.0",
+      "installedAt": 1773045315157
+    },
+    "agent-directory": {
+      "version": "1.2.0",
+      "installedAt": 1773045322732
+    },
+    "multi-agent-collaboration": {
+      "version": "1.0.0",
+      "installedAt": 1773045336546
+    },
+    "coding": {
+      "version": "1.0.3",
+      "installedAt": 1773045341061
+    },
+    "github": {
+      "version": "1.0.0",
+      "installedAt": 1773045343282
+    },
+    "notion": {
+      "version": "1.0.0",
+      "installedAt": 1773046057005
+    },
+    "slack": {
+      "version": "1.0.0",
+      "installedAt": 1773046089347
+    },
+    "calendar": {
+      "version": "1.0.0",
+      "installedAt": 1773046449903
+    },
+    "project-planner": {
+      "version": "1.0.2",
+      "installedAt": 1773046452524
+    },
+    "google-sheets-reporting": {
+      "version": "1.0.1",
+      "installedAt": 1773046455097
+    },
+    "coda-ai": {
+      "version": "0.2.3",
+      "installedAt": 1773046457148
+    },
+    "trello": {
+      "version": "1.0.0",
+      "installedAt": 1773046459106
+    },
+    "canvas": {
+      "version": "1.0.0",
+      "installedAt": 1773046775343
+    },
+    "openclaw-dashboard": {
+      "version": "1.7.3",
+      "installedAt": 1773046778798
+    },
+    "web": {
+      "version": "1.0.0",
+      "installedAt": 1773046782084
+    },
+    "video-frames": {
+      "version": "1.0.0",
+      "installedAt": 1773078110188
+    },
+    "summarize": {
+      "version": "1.0.0",
+      "installedAt": 1773078113689
+    },
+    "ddg-web-search": {
+      "version": "1.0.0",
+      "installedAt": 1773085728226
+    }
+  }
+}
