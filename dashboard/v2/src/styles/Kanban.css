@@ -1,0 +1,152 @@
+.kanban-page {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.kanban-container {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 20px;
+  min-height: calc(100vh - 200px);
+}
+
+.kanban-column {
+  min-width: 280px;
+  max-width: 280px;
+  background-color: var(--bg-secondary);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 180px);
+}
+
+.column-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px;
+  border-bottom: 1px solid var(--border-color);
+  border-left: 4px solid transparent;
+}
+
+.column-header h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  flex: 1;
+  margin: 0;
+}
+
+.task-count {
+  background-color: var(--bg-tertiary);
+  color: var(--text-secondary);
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.tasks-container {
+  padding: 12px;
+  overflow-y: auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.task-card {
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 12px;
+  cursor: grab;
+  transition: all 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.task-card:hover {
+  border-color: var(--accent-blue);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.task-card:active {
+  cursor: grabbing;
+}
+
+.task-priority {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+}
+
+.task-id {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  font-family: monospace;
+  margin-left: 8px;
+}
+
+.task-title {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin: 8px 0 12px 8px;
+  line-height: 1.4;
+}
+
+.task-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-left: 8px;
+}
+
+.task-agent {
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.task-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.task-tag {
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+}
+
+.add-task-btn {
+  background: transparent;
+  border: 2px dashed var(--border-color);
+  border-radius: 8px;
+  color: var(--text-muted);
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.85rem;
+}
+
+.add-task-btn:hover {
+  border-color: var(--accent-blue);
+  color: var(--accent-blue);
+  background-color: rgba(88, 166, 255, 0.05);
+}
+
+/* Drag state */
+.task-card.dragging {
+  opacity: 0.5;
+  transform: rotate(2deg);
+}

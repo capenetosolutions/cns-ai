@@ -1,0 +1,125 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0 24px 0;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 24px;
+}
+
+.page-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-btn {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-secondary);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.header-btn:hover {
+  background-color: var(--bg-hover);
+  color: var(--text-primary);
+  border-color: var(--bg-hover);
+}
+
+.notification-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 18px;
+  height: 18px;
+  background-color: var(--accent-red);
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 600;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-menu {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px;
+  padding-right: 12px;
+  background-color: var(--bg-tertiary);
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+}
+
+.user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--border-color);
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.user-name {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.user-role {
+  font-size: 0.7rem;
+  color: var(--accent-green);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.logout-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  margin-left: 4px;
+}
+
+.logout-btn:hover {
+  background-color: rgba(248, 81, 73, 0.1);
+  color: var(--accent-red);
+}
+
+@media (max-width: 768px) {
+  .user-info {
+    display: none;
+  }
+  
+  .page-title {
+    font-size: 1.25rem;
+  }
+}
