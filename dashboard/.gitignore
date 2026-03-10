@@ -1,0 +1,14 @@
+# Logs
+*.log
+server.log
+
+# Cache files
+cache-bust.txt
+last-updated.txt
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node modules (if any)
+node_modules/

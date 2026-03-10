@@ -1,10 +1,11 @@
 ---
 id: TASK-008
-title: "Build Interactive CNS Dashboard v2"
+title: "Build Interactive CNS Dashboard v2 - DEADLINE: 2026-03-10 08:00 GMT"
 assignee: tech-agent
 status: in-progress
 created: 2026-03-09
-priority: high
+deadline: 2026-03-10 08:00
+priority: critical
 project: CNS AI Command Center
 ---
 
